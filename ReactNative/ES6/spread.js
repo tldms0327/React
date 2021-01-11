@@ -32,5 +32,23 @@ let arr4 = arr3;
 arrCpy.push(5);
 arr4.push(4);
 
-console.log(arr4, arrCpy, arr4)
+console.log(arr4, arrCpy, arr4); // [1, 2, 3, 4], [1, 2, 3, 5],[1, 2, 3, 4]
 
+
+//spread operator in Object
+
+let drinks = {
+    caffe: 'latter',
+    coca: 'cola',
+}
+let newDrinks = {
+    lemon: 'tea',
+    drinks
+}
+let newDrinks2 = {
+    lemon: 'tea',
+    ...drinks
+}
+
+console.log(newDrinks);
+console.log(newDrinks2);
