@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+ReactNative/ecma6/
+
+.DS_Store
+
+ReactNative/first_app/ios/first_app.xcodeproj/project.pbxproj
