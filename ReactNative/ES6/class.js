@@ -5,7 +5,7 @@ class Person {
 
     } 
 
-    gretting(val = 'hello') {
+    gretting(val = '안녕') {
         // console.log(val);
     }
 }
@@ -16,7 +16,7 @@ let korean = new Person('Korea', 'male');
 korean.gender = 'female';
 // console.log(korean); // Person {region: 'Korea', gender: 'female'}
 
-//korean.gretting();
+//korean.gretting(); //안녕
 
 //상속
 class American extends Person {
@@ -24,7 +24,7 @@ class American extends Person {
         super(region_, gender_); // super: 상속받은 내용을 그대로 사용한다
         this.language = language_;
     }
-    grettings(val = 'hello') {
+    gretting(val = 'hello') {
         console.log(val);
     }
 }
@@ -32,4 +32,4 @@ class American extends Person {
 let american = new American('USA', 'femaile', 'English')
 
 //console.log(american); // American {region: 'USA', gender: 'femaile', language: 'English'
-american.gretting(); //부모 클래스와 같은 이름의 메소드는 자식클래스로 덮어쓴다.
+american.gretting(); //hello - 부모 클래스와 같은 이름의 메소드는 자식클래스로 덮어쓴다.
