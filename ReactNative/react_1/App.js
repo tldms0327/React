@@ -8,6 +8,7 @@
 
 import React, { Component } from 'react';
 import { View, Text, Button, Image, StyleSheet } from 'react-native';
+import Header from './src/header'
 
 //view: 다른 컴포넌트들을 감싸주는 역할로, 화면에 출력되려면 view 안에 입력해주기
 //화면을 채우는 컨테이너 역할
@@ -21,6 +22,10 @@ import { View, Text, Button, Image, StyleSheet } from 'react-native';
 //1. inline 스타일링: 태그 내부에 직접 입력
 //2. 밑에 따로 빼서 설정하기(StyleSheet)
 class App extends Component {
+
+  state = {
+    appName: 'My First App'
+  }
   render() {
     return (
       <View>
@@ -28,7 +33,7 @@ class App extends Component {
         <View style={{
           backgroundColor: 'yellow',
           height: '30%',
-          marginTop: 80,
+          marginTop: 50,
           alignItems: 'center',
           justifyContent:'center',
         }}>
@@ -45,6 +50,11 @@ class App extends Component {
           </View>
         </View>
 
+        {/* Header */}
+        <View style={styles.headerView}>
+          <Header name={this.state.appName}/>
+        </View>
+
       </View>
     )
   }
@@ -58,21 +68,21 @@ const styles = StyleSheet.create({
     height: '30%',
     alignItems: 'center',
     justifyContent:'center',
-    marginTop: 50,
-    paddingTop: 50,
+    marginTop: 30,
+    paddingTop: 20,
   },
   subView: {
     flex: 2,
     backgroundColor: 'beige',
-    height: '30%',
-    marginBottom: 30,
+    height: '20%',
+    marginBottom: 20,
     alignItems: 'center',
     justifyContent:'center',
-    width: '50%'
+    width: '30%'
   },
   anotherView: {
     flex:3,
-    height: '60%',
+    height: '30%',
     backgroundColor: 'beige',
     marginBottom: 30,
     alignItems: 'center',
@@ -84,6 +94,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'green',
     padding: 20
+  },
+  headerView: {
+    backgroundColor: 'skyblue',
+    marginTop: 50,
+    alignItems: 'center',
+    justifyContent:'center',
   }
 })
 
