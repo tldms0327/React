@@ -8,10 +8,11 @@
 
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import PropsChild from './propsChild'
 
 class App extends Component {
   state = {
-    sampleText: 'Hello World',
+    sampleText: 'First',
     sampleBoolean: false, // 값을 초기화
     num: 1
   }
@@ -38,16 +39,15 @@ class App extends Component {
   changeState = () => {
     if (!this.state.sampleBoolean)  {
       this.setState({
-        sampleText: 'Text Changed',
+        sampleText: '안녕',
         sampleBoolean: true
       })
     } else {
       this.setState({
-        sampleText: 'Hello~',
+        sampleText: 'Hello',
         sampleBoolean: false
       })
     }
-
   }
 
   onAdd = () => {
@@ -61,17 +61,18 @@ class App extends Component {
     )
   }
 
-  
   render() {
     return (
       <View style={styles.background}>
-        <Text onPress = {this.changeState}>
+        <Text>
           {this.state.sampleText} 
           {/*this는 JS 문법으로, 상위 scope를 가리킨다. */}
         </Text>
         <Text onPress = {this.onAdd}>
           {this.state.num}
         </Text>
+        <PropsChild sText={this.state.sampleText} cState={this.changeState}/>
+        {/* 부모가 자식에게 데이터를 줄 준비는 끝! */}
       </View>
     )
   }
