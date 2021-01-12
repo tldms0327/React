@@ -50,5 +50,5 @@ let newDrinks2 = {
     ...drinks
 }
 
-console.log(newDrinks);
-console.log(newDrinks2);
+console.log(newDrinks); //nested dictionary같은 결과가 나옴
+console.log(newDrinks2); // 두 dictionary의 key 값이 합쳐짐
