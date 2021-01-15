@@ -64,7 +64,7 @@ class App extends Component {
   render() {
     return (
       <View style={styles.background}>
-        <Text>
+        <Text onPress = {this.changeState}>
           {this.state.sampleText} 
           {/*this는 JS 문법으로, 상위 scope를 가리킨다. */}
         </Text>

@@ -50,7 +50,8 @@ class App extends Component {
           </View>
         </View>
 
-        {/* Header */}
+        {/* View가 터치에 반응하도록 만들어보자 */}
+        {/* p.s.text에도 터치 이벤트를 넣을 수 있다 */}
         <View style={styles.headerView}>
           <Header name={this.state.appName}/>
         </View>
