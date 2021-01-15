@@ -13,10 +13,11 @@ const styles = StyleSheet.create({
         justifyContent: "flex-end",
         paddingHorizontal: 30,
         paddingVertical: 150, 
-        backgroundColor: "#FDF6AA"
+        backgroundColor: "#A3E4D7"
     },
     text: {
-        fontSize: 40 //px를 쓸때는 "40px"
+        fontSize: 35, //px를 쓸때는 "40px"
+        color: "#0C5647",
     }
 
 });
