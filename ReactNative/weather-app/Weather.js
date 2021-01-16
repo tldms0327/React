@@ -5,9 +5,17 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { LinearGradient } from 'expo-linear-gradient';
 
 const weatherOptions = {
+    Clear: {
+        iconName: "weather-sunny",
+        gradient: ["#DD5E89", "#F7BB97"],
+        title: "Sunny",
+        subtitle: "화창하구머잉"
+    },
     Haze: {
         iconName: "weather-hail",
-        gradient: ["#43C6AC", "#191654"]
+        gradient: ["#43C6AC", "#191654"],
+        title: "Haze",
+        subtitle: "구름 끼는 우중충한 날씨ㅠㅠ"
     },
     Clouds: {
         iconName: "weather-cloudy",
@@ -17,19 +25,27 @@ const weatherOptions = {
     },
     Thunderstorm: {
         iconName: "weather-lightning-rainy",
-        gradient: ["#141E30", "#243B55"]
+        gradient: ["#141E30", "#243B55"],
+        title: "Cloudy",
+        subtitle: "구름 끼는 우중충한 날씨ㅠㅠ"
     },
     Drizzle: {
         iconName: "weather-lightning-rainy",
-        gradient: ["#948E99", "#2E1437"]
+        gradient: ["#948E99", "#2E1437"],
+        title: "Cloudy",
+        subtitle: "구름 끼는 우중충한 날씨ㅠㅠ"
     },
     Rain: {
         iconName: "weather-pouring",
-        gradient: ["#1A2980", "#26D0CE"]
+        gradient: ["#1A2980", "#26D0CE"],
+        title: "Rainy",
+        subtitle: "비온다!!!"
     },
     Snow: {
         iconName: "weather-snowy",
-        gradient: ["#2c3e50", "#bdc3c7"]
+        gradient: ["#2c3e50", "#bdc3c7"],
+        title: "Snowy",
+        subtitle: "눈온댜!!!"
     },
 }
 
